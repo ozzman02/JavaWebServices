@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: USUARIO
+Build-Jdk: 12.0.2
+Implementation-Title: restattachments
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.bharath.restws
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/restattachment
+ s/
+Created-By: Maven Integration for Eclipse
+
