@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:patient xmlns:tns="http://www.example.org/Patient"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/Patient Patient.xsd ">
+	<tns:id>1</tns:id>
+	<tns:name>Oscar</tns:name>
+	<tns:age>37</tns:age>
+	<tns:dob>1982-07-10</tns:dob>
+	<tns:email>osantamaria@gmail.com</tns:email>
+	<tns:gender>M</tns:gender>
+	<tns:phone>72962632</tns:phone>
+</tns:patient>
