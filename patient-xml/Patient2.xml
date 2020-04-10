@@ -10,6 +10,9 @@
 	<tns:gender>M</tns:gender>
 	<tns:phone>tns:phone</tns:phone>
 	<tns:payment>
-		<tns:cash>0</tns:cash>
+		<tns:insurance>
+			<tns:limit>1000</tns:limit>
+			<tns:provider>Blue Cross</tns:provider>
+		</tns:insurance>
 	</tns:payment>
 </tns:patient>
