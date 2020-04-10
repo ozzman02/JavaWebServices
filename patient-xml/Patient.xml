@@ -4,9 +4,9 @@
 	xsi:schemaLocation="http://www.example.org/Patient Patient.xsd ">
 	<tns:id>1</tns:id>
 	<tns:name>Oscar</tns:name>
-	<tns:age>37</tns:age>
-	<tns:dob>1982-07-10</tns:dob>
-	<tns:email>osantamaria@gmail.com</tns:email>
+	<tns:age>22</tns:age>
+	<tns:dob>2001-01-01</tns:dob>
+	<tns:email>tns:email</tns:email>
 	<tns:gender>M</tns:gender>
-	<tns:phone>72962632</tns:phone>
+	<tns:phone>tns:phone</tns:phone>
 </tns:patient>
