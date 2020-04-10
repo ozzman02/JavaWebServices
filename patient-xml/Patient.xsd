@@ -2,13 +2,15 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Patient"
 	xmlns:tns="http://www.example.org/Patient" elementFormDefault="qualified">
 	
+	<!-- elementFormDefault qualified needs the prefix (tns in the xml file) -->
+	<!-- elementFormDefault unqualified does not need the prefix (tns in the xml file) -->
+	
 	<element name="patient" type="tns:Patient"></element>
 	
 	<!-- maxOccurs = unbounded: Any number of elements -->
 	<!-- minOccurs = 0: Optional element -->
 	<complexType name="Patient">
 		<sequence>
-			<element name="id" type="tns:Id" maxOccurs="2"></element>
 			<element name="name" type="tns:String15Chars"></element>
 			<element name="age" type="int"></element>
 			<element name="dob" type="date"></element>
@@ -17,6 +19,7 @@
 			<element name="phone" type="string"></element>
 			<element name="payment" type="tns:PaymentType"></element>
 		</sequence>
+		<attribute name="id" type="tns:Id"></attribute>
 	</complexType>
 	
 	<!-- choice means that only one of them should appear in the xml file -->
