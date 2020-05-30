@@ -28,6 +28,8 @@ public class ObjectFactory {
     private final static QName _GetOrdersResponse_QNAME = new QName("http://trainings.ws.bharath.com/", "getOrdersResponse");
     private final static QName _CreateOrdersRequest_QNAME = new QName("http://trainings.ws.bharath.com/", "createOrdersRequest");
     private final static QName _CreateOrdersResponse_QNAME = new QName("http://trainings.ws.bharath.com/", "createOrdersResponse");
+    private final static QName _DeleteOrdersRequest_QNAME = new QName("http://trainings.ws.bharath.com/", "deleteOrdersRequest");
+    private final static QName _DeleteOrdersResponse_QNAME = new QName("http://trainings.ws.bharath.com/", "deleteOrdersResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.bharath.ws.trainings
@@ -66,6 +68,22 @@ public class ObjectFactory {
      */
     public CreateOrdersResponse createCreateOrdersResponse() {
         return new CreateOrdersResponse();
+    }
+
+    /**
+     * Create an instance of {@link DeleteOrdersRequest }
+     * 
+     */
+    public DeleteOrdersRequest createDeleteOrdersRequest() {
+        return new DeleteOrdersRequest();
+    }
+
+    /**
+     * Create an instance of {@link DeleteOrdersResponse }
+     * 
+     */
+    public DeleteOrdersResponse createDeleteOrdersResponse() {
+        return new DeleteOrdersResponse();
     }
 
     /**
@@ -134,6 +152,32 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://trainings.ws.bharath.com/", name = "createOrdersResponse")
     public JAXBElement<CreateOrdersResponse> createCreateOrdersResponse(CreateOrdersResponse value) {
         return new JAXBElement<CreateOrdersResponse>(_CreateOrdersResponse_QNAME, CreateOrdersResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteOrdersRequest }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link DeleteOrdersRequest }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://trainings.ws.bharath.com/", name = "deleteOrdersRequest")
+    public JAXBElement<DeleteOrdersRequest> createDeleteOrdersRequest(DeleteOrdersRequest value) {
+        return new JAXBElement<DeleteOrdersRequest>(_DeleteOrdersRequest_QNAME, DeleteOrdersRequest.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteOrdersResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link DeleteOrdersResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://trainings.ws.bharath.com/", name = "deleteOrdersResponse")
+    public JAXBElement<DeleteOrdersResponse> createDeleteOrdersResponse(DeleteOrdersResponse value) {
+        return new JAXBElement<DeleteOrdersResponse>(_DeleteOrdersResponse_QNAME, DeleteOrdersResponse.class, null, value);
     }
 
 }

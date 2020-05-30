@@ -11,6 +11,8 @@ import org.apache.cxf.feature.Features;
 import com.bharath.ws.trainings.CreateOrdersRequest;
 import com.bharath.ws.trainings.CreateOrdersResponse;
 import com.bharath.ws.trainings.CustomerOrdersPortType;
+import com.bharath.ws.trainings.DeleteOrdersRequest;
+import com.bharath.ws.trainings.DeleteOrdersResponse;
 import com.bharath.ws.trainings.GetOrdersRequest;
 import com.bharath.ws.trainings.GetOrdersResponse;
 import com.bharath.ws.trainings.Order;
@@ -64,6 +66,16 @@ public class CustomerOrdersWsImpl implements CustomerOrdersPortType {
 		CreateOrdersResponse response = new CreateOrdersResponse();
 		response.setResult(true);
 
+		return response;
+	}
+
+	@Override
+	public DeleteOrdersResponse deleteOrders(DeleteOrdersRequest request) {
+		BigInteger customerId = request.getCustomerId();
+		List<Order> orders = customerOrders.get(customerId);
+		orders.removeAll(orders);
+		DeleteOrdersResponse response = new DeleteOrdersResponse();
+		response.setResult(true);
 		return response;
 	}
 

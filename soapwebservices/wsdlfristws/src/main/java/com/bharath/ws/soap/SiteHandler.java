@@ -15,6 +15,7 @@ import javax.xml.ws.handler.soap.SOAPMessageContext;
 
 public class SiteHandler implements SOAPHandler<SOAPMessageContext> {
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public boolean handleMessage(SOAPMessageContext context) {
 

@@ -21,6 +21,7 @@ public class WebServiceConfig {
 	@Autowired
 	private Bus bus;
 
+	@SuppressWarnings("rawtypes")
 	@Bean
 	public Endpoint endpoint() {
 		Endpoint endpoint = new EndpointImpl(bus, new CustomerOrdersWsImpl());
