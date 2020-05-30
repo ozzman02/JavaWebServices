@@ -25,6 +25,7 @@ public class App {
 	public static StringWriter marshallPatient(JAXBContext context) throws JAXBException {
 		StringWriter stringWriter = new StringWriter();
 		Marshaller marshaller = context.createMarshaller();
+		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 		marshaller.marshal(createPatient(), stringWriter);
 		return stringWriter;
 	}
@@ -42,6 +43,7 @@ public class App {
 			JAXBContext context = JAXBContext.newInstance(Patient.class);
 			StringWriter sw = marshallPatient(context);
 			System.out.println(sw.toString());
+			System.out.println();
 			Patient patient = unMarshallPatient(context, sw);
 			System.out.println(patient);
 		} catch (JAXBException e) {
