@@ -35,6 +35,15 @@
 				<soap:body use="literal" />
 			</wsdl:output>
 		</wsdl:operation>
+		<wsdl:operation name="deleteOrders">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="deleteOrders">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="deleteOrdersResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
 	</wsdl:binding>
 	<wsdl:service name="CustomerOrdersWsImplService">
 		<wsdl:port
