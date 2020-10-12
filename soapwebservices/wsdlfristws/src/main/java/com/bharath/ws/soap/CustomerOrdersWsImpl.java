@@ -18,6 +18,7 @@ import com.bharath.ws.trainings.GetOrdersResponse;
 import com.bharath.ws.trainings.Order;
 import com.bharath.ws.trainings.Product;
 
+
 @Features(features = "org.apache.cxf.feature.LoggingFeature")
 public class CustomerOrdersWsImpl implements CustomerOrdersPortType {
 

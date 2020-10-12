@@ -1,13 +1,8 @@
 package com.bharath.ws.soap;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
+import java.io.*;
 
 public class FileWsImpl implements FileWs {
 
@@ -18,7 +13,7 @@ public class FileWsImpl implements FileWs {
 		try {
 			 inputStream = attachment.getInputStream();
 			 outputStream = new FileOutputStream(
-					new File("/Users/bharaththippireddy/Desktop/files/uploaded/test.jpg"));
+					new File("/Users/oscarsantamaria/Desktop/uploaded/test.jpg"));
 			byte[] b = new byte[100000];
 			int bytesRead = 0;
 
@@ -42,7 +37,7 @@ public class FileWsImpl implements FileWs {
 
 	@Override
 	public DataHandler download() {
-		return new DataHandler(new FileDataSource(new File("/Users/bharaththippireddy/Desktop/files/uploaded/test.jpg")));
+		return new DataHandler(new FileDataSource(new File("/Users/oscarsantamaria/Desktop/uploaded/test.jpg")));
 	}
 
 }

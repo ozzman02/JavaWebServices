@@ -1,0 +1,11 @@
+com/bharath/ws/soap/PaymentProcessorImplService.class
+com/bharath/ws/soap/ObjectFactory.class
+com/bharath/ws/soap/CreditCardInfo.class
+com/bharath/ws/soap/PaymentProcessorRequest.class
+com/bharath/ws/soap/ProcessPayment.class
+com/bharath/trainings/ws/client/PaymentWSClient.class
+com/bharath/ws/soap/package-info.class
+com/bharath/ws/soap/ProcessPaymentResponse.class
+com/bharath/ws/soap/PaymentProcessorResponse.class
+com/bharath/ws/soap/UtclientApplication.class
+com/bharath/ws/soap/PaymentProcessor.class
