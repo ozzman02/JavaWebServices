@@ -1,0 +1,17 @@
+com/bharath/ws/trainings/package-info.class
+com/bharath/ws/trainings/CreateOrdersResponse.class
+com/bharath/ws/soap/CustomerOrdersWsImpl.class
+com/bharath/ws/trainings/GetOrdersResponse.class
+com/bharath/ws/soap/WsdlfirstwsApplication.class
+com/bharath/ws/trainings/DeleteOrdersResponse.class
+com/bharath/trainings/ws/handlers/SiteHandler.class
+com/bharath/ws/trainings/CreateOrdersRequest.class
+com/bharath/ws/trainings/CustomerOrdersService.class
+com/bharath/ws/trainings/GetOrdersRequest.class
+com/bharath/ws/trainings/DeleteOrdersRequest.class
+com/bharath/ws/soap/config/WebServiceConfig.class
+com/bharath/ws/soap/SiteHandler.class
+com/bharath/ws/trainings/Order.class
+com/bharath/ws/trainings/CustomerOrdersPortType.class
+com/bharath/ws/trainings/ObjectFactory.class
+com/bharath/ws/trainings/Product.class
