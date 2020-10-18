@@ -4,13 +4,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.bharath.restws</groupId>
-	<artifactId>restws</artifactId>
+	<groupId>com.bharath.courses</groupId>
+	<artifactId>courses-restws</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>restws</name>
-	<description>Patient REST Services</description>
+	<name>courses-restws</name>
+	<description>Courses REST Services</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -22,7 +22,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>12</java.version>
+		<java.version>11</java.version>
 	</properties>
 
 	<dependencies>
