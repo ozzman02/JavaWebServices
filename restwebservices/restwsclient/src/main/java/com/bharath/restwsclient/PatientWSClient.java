@@ -1,5 +1,7 @@
 package com.bharath.restwsclient;
 
+import com.bharath.restwsclient.model.Patient;
+
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
@@ -7,8 +9,6 @@ import javax.ws.rs.client.Invocation.Builder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-
-import com.bharath.restwsclient.model.Patient;
 
 public class PatientWSClient {
 
@@ -35,9 +35,14 @@ public class PatientWSClient {
 		newPatient.setName("Bob");
 
 		WebTarget postTarget = client.target(PATIENT_SERVICE_URL).path(PATIENTS);
-		Patient createdPatient = postTarget.request().post(Entity.entity(patient, MediaType.APPLICATION_XML),
+		Patient createdPatient = postTarget.request().post(Entity.entity(newPatient, MediaType.APPLICATION_XML),
 				Patient.class);
 		System.out.println("Created Patient ID " + createdPatient.getId());
+
+		WebTarget deleteTarget = client.target(PATIENT_SERVICE_URL).path(PATIENTS).path("/{id}").resolveTemplate("id", 123);
+		Response deleteResponse = deleteTarget.request().delete();
+		System.out.println(deleteResponse.getStatus());
+		deleteResponse.close();
 
 		client.close();
 
