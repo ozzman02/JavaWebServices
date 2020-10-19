@@ -30,7 +30,6 @@ public class PassengerServiceImpl implements PassengerService {
 	public void addPassenger(String firstName, String lastName, String agent, HttpHeaders headers) {
 		System.out.println(firstName);
 		System.out.println(lastName);
-
 		System.out.println(agent);
 
 		MultivaluedMap<String, String> allHeaders = headers.getRequestHeaders();
@@ -47,6 +46,12 @@ public class PassengerServiceImpl implements PassengerService {
 			System.out.println(eachCookieKey);
 			System.out.println(cookies.get(eachCookieKey).getValue());
 		}
+
+		Passenger passenger = new Passenger();
+		passenger.setId(currentId);
+		passenger.setName(firstName.concat(" ").concat(lastName));
+		passengers.add(passenger);
+		currentId++;
 		
 	}
 
