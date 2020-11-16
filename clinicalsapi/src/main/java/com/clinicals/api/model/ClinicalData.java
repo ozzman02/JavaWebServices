@@ -1,13 +1,17 @@
 package com.clinicals.api.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
+@Table(name = "clinicaldata")
+@JsonIgnoreProperties({"patient"})
 public class ClinicalData {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String componentName;
@@ -15,6 +19,10 @@ public class ClinicalData {
     private String componentValue;
 
     private Timestamp measuredDateTime;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "patient_id", nullable = false)
+    private Patient patient;
 
     public int getId() {
         return id;
@@ -48,4 +56,11 @@ public class ClinicalData {
         this.measuredDateTime = measuredDateTime;
     }
 
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
 }
